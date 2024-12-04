@@ -1,0 +1,55 @@
+.skills {
+  @apply bg-gray-900 py-20;
+}
+
+.skills__container {
+  @apply container mx-auto px-4;
+}
+
+.skills__title {
+  @apply mb-16 text-center text-4xl font-bold text-white;
+}
+
+.skills__grid {
+  @apply grid gap-8 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.skills__card {
+  @apply rounded-xl bg-gray-800 p-6 shadow-lg;
+}
+
+.skills__card-header {
+  @apply mb-4 flex items-center gap-3;
+}
+
+.skills__icon-wrapper {
+  @apply rounded-lg bg-blue-500/10 p-2 text-blue-400;
+}
+
+.skills__category-title {
+  @apply text-xl font-semibold text-white;
+}
+
+.skill-bar {
+  @apply mt-2;
+}
+
+.skill-bar__header {
+  @apply flex justify-between text-sm;
+}
+
+.skill-bar__name {
+  @apply text-gray-300;
+}
+
+.skill-bar__level {
+  @apply text-gray-400;
+}
+
+.skill-bar__track {
+  @apply mt-1 h-2 w-full rounded-full bg-gray-700;
+}
+
+.skill-bar__progress {
+  @apply h-full rounded-full bg-gradient-to-r from-blue-500 to-cyan-500;
+}

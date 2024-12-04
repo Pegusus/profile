@@ -1,0 +1,37 @@
+.hero {
+  @apply relative h-screen w-full;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;;
+}
+
+.hero__overlay {
+  @apply absolute inset-0 z-0;
+  display: flex
+}
+
+.hero__gradient {
+  @apply h-full w-full bg-gradient-to-b from-black/50 to-transparent;
+  z-index: 15;
+}
+
+.hero__content {
+  @apply relative z-10 flex h-full flex-col items-center justify-center px-4;
+}
+
+.hero__title {
+  @apply text-5xl font-bold text-white md:text-7xl;
+}
+
+.hero__subtitle {
+  @apply mt-4 max-w-2xl text-center text-lg text-gray-200;
+}
+
+.hero__social-links {
+  @apply mt-8 flex space-x-6;
+}
+
+.hero__social-link {
+  @apply text-white hover:text-gray-300;
+}
