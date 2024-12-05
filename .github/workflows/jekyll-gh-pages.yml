@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - master  # Replace with your default branch name if not 'master'
+      - gh-pages
 
   workflow_dispatch: # Allows manual runs
 
@@ -41,3 +41,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          publish_branch: gh-pages
