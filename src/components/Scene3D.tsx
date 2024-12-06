@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sphere } from '@react-three/drei';
 import { useRef } from 'react';
 import * as THREE from 'three';
+import { FoxModel } from './models/fox';
 
 export const Scene3D = () => {
   const groupRef = useRef();

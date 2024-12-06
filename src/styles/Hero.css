@@ -18,6 +18,7 @@
 
 .hero__content {
   @apply relative z-10 flex h-full flex-col items-center justify-center px-4;
+  padding-top: 12rem;
 }
 
 .hero__title {

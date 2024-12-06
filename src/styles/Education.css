@@ -1,0 +1,52 @@
+.education {
+    @apply bg-gray-900 py-20;
+  }
+  
+  .education__container {
+    @apply container mx-auto px-4;
+  }
+  
+  .education__title {
+    @apply mb-16 text-center text-4xl font-bold text-white;
+  }
+  
+  .education__list {
+    @apply space-y-8;
+  }
+  
+  .education__card {
+    @apply flex gap-6 rounded-xl bg-gray-800 p-6 shadow-lg transition-all hover:bg-gray-800/90;
+  }
+  
+  .education__icon-wrapper {
+    @apply flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-400;
+  }
+  
+  .education__content {
+    @apply flex-grow;
+  }
+  
+  .education__institution {
+    @apply text-2xl font-semibold text-white;
+  }
+  
+  .education__meta {
+    @apply mt-2 flex flex-wrap gap-4 text-gray-400;
+  }
+  
+  .education__location,
+  .education__period {
+    @apply flex items-center gap-2;
+  }
+  
+  .education__degree {
+    @apply mt-3 text-lg text-gray-300;
+  }
+  
+  .education__grades {
+    @apply mt-4 flex flex-wrap gap-4;
+  }
+  
+  .education__grade {
+    @apply flex items-center gap-2 rounded-full bg-blue-500/10 px-3 py-1 text-sm text-blue-400;
+  }

@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { Experience } from './components/Experience';
 import { Skills } from './components/Skills';
 import { Achievements } from './components/Achievements';
+import { Education } from './components/Education';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Scene3D />
       <div className="relative z-10">
         <Hero />
+        <Education />
         <Experience />
         <Skills />
         <Achievements />

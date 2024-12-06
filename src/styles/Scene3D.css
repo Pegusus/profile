@@ -6,6 +6,8 @@
 .canvas3d {
   display: flex;
   position: fixed !important;
+  z-index: 12; /* Gradient layer above canvas */
+  opacity: 0.5;
 }
 
 .canvas3d::after {
@@ -14,7 +16,7 @@
   inset: 0; /* Covers the entire canvas */
   background: linear-gradient(to bottom, rgba(28, 35, 49, 0) 0%, rgba(28, 35, 49, 0.8) 30%);
   pointer-events: none; /* Ensure it doesn’t block interactions */
-  z-index: 1; /* Gradient layer above canvas */
+  
 }
 
 .scene {

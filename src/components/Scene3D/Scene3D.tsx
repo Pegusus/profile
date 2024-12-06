@@ -3,6 +3,7 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import { Helix } from './Helix';
 import { FloatingShapes } from './FloatingShapes';
 import '../../styles/Scene3D.css';
+import { FoxModel } from '../models/fox';
 
 export const Scene3D = () => {
   return (
@@ -10,12 +11,10 @@ export const Scene3D = () => {
       camera={{ position: [0, 0, 8], fov: 60 }}
       className="canvas3d"
     >
-      {/* <color attach="background" args={['#000920']} /> */}
       
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={0.8} />
       <pointLight position={[-10, -10, -10]} intensity={0.5} />
-      
       <Stars
         radius={50}
         depth={50}
@@ -25,8 +24,9 @@ export const Scene3D = () => {
         fade
         speed={1}
       />
-      
+
       <group position={[0, 0, 0]}>
+        <FoxModel position={[0,1.5,0]} scale={1.2}/>
         <Helix />
         <FloatingShapes />
       </group>
