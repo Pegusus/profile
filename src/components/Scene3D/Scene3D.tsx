@@ -26,7 +26,6 @@ export const Scene3D = () => {
       />
 
       <group position={[0, 0, 0]}>
-        <FoxModel position={[0,1.5,0]} scale={1.2}/>
         <Helix />
         <FloatingShapes />
       </group>

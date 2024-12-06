@@ -1,36 +1,50 @@
-import React, { useRef } from 'react';
-import { useGLTF } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
-import { purple } from '@mui/material/colors';
+import React, { useEffect } from "react";
+import { useAnimations, useGLTF } from "@react-three/drei";
+import { useControls } from "leva";
 
-export function FoxModel({ position = [0, 0, 0], scale = 1 }) {
-  const { nodes } = useGLTF('/profile/fox.glb');
-  const groupRef = useRef();
+const FoxModel = () => {
+  // Load the GLTF model and animations
+  const fox = useGLTF("./Fox/glTF/Fox.gltf");
+  const { actions, names } = useAnimations(fox.animations, fox.scene);
 
-  // Optional animation logic
-//   useFrame(() => {
-//     if (groupRef.current) {
-//       groupRef.current.rotation.y += animationSpeed; // Fox spins slowly
-//     }
-//   });
+  const animationSequence = ["Survey", "Walk", "Run"];
+
+  useEffect(() => {
+    let currentIndex = 0;
+
+    const playNextAnimation = () => {
+      const currentAnimation = animationSequence[currentIndex];
+
+      // Stop the current animation if it's playing
+      const action = actions[currentAnimation];
+      if (action) {
+        action.reset().fadeIn(0.5).play();
+      }
+
+      // Move to the next animation after a certain duration (e.g., 3 seconds for each)
+      currentIndex = (currentIndex + 1) % animationSequence.length; // Loop through the sequence
+      setTimeout(playNextAnimation, 5000); // Play each animation for 3 seconds
+    };
+
+    // Start playing the animations
+    playNextAnimation();
+
+    return () => {
+      // Cleanup: Stop all animations when the component is unmounted
+      Object.values(actions).forEach((action) => action.stop());
+    };
+  }, [actions]);
 
   return (
-    <group ref={groupRef} position={position} scale={scale} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane_0.geometry}
-          position={[-0.367, 1.173, -0.02]}
-          rotation={[0, Math.PI / 2, 0]}
-          scale={0.25}
-          renderOrder={1000}
-        >
-          <meshStandardMaterial />
-        </mesh>
-      </group>
-    </group>
+    <>
+      <primitive
+        object={fox.scene} // Render the GLTF scene
+        scale={0.3} // Scale the model
+        position={[-8, -2, -50]} // Set position in 3D space
+        rotation-y={1} // Apply rotation on Y-axis
+      />
+    </>
   );
-}
+};
 
-useGLTF.preload('/fox.glb');
+export default FoxModel;
