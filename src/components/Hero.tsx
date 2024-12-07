@@ -8,7 +8,7 @@ import '../styles/Hero.css';
 export const Hero = () => {
   return (
     <div className="hero">
-      {/* 3D Fox Model Canvas */}
+      <div className='hero_canvas_wrapper'>
       <Canvas
         camera={{ position: [0, 0, 5], fov: 60 }}
         className="hero__canvas"
@@ -22,11 +22,7 @@ export const Hero = () => {
           enablePan={false}
         />
       </Canvas>
-
-      {/* <div className="hero__overlay">
-        <div className="hero__gradient" />
-      </div> */}
-      
+      </div>
       <div className="hero__content">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}

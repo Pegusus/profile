@@ -39,9 +39,9 @@ const FoxModel = () => {
     <>
       <primitive
         object={fox.scene} // Render the GLTF scene
-        scale={0.3} // Scale the model
-        position={[-8, -2, -50]} // Set position in 3D space
-        rotation-y={1} // Apply rotation on Y-axis
+        scale={0.4} // Scale the model
+        position={[0, -10, -80]} // Set position in 3D space
+        rotation-y={-1} // Apply rotation on Y-axis
       />
     </>
   );
