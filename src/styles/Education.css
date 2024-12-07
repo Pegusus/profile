@@ -70,6 +70,7 @@
     align-items: center;
     text-align: center;
     margin-right: -30%;
+    font-weight: normal;
   }
 
   .education__card::after {
@@ -140,5 +141,62 @@
     .education__card:hover::after {
       visibility: hidden;  /* Hide the tooltip on small screens */
       opacity: 0;  /* Make sure the tooltip is completely hidden */
+    }
+
+    .education__container {
+      width: 100%;
+    }
+
+    .education__card-content {
+      flex-direction: column; /* Stack logo and details vertically */
+      align-items: center; /* Center align items */
+      padding: 1rem;
+      width: 100%;
+    }
+  
+    /* Adjust the logo to be above the details */
+    .education__logo {
+      width: 6rem; /* Adjust logo size */
+      height: 6rem; /* Adjust logo size */
+      margin-bottom: 1rem; /* Space between logo and details */
+    }
+  
+    .education__details {
+      padding-left: 0; /* Remove left padding in column layout */
+      text-align: center; /* Center the text */
+    }
+  
+    .education__meta {
+      flex-direction: column; /* Stack meta data vertically */
+      text-align: center;
+      gap: 0.5rem; /* Adjust gap between items */
+    }
+
+    .education__location {
+      text-align: center; /* Center degree text */
+      justify-content: center;
+    }
+
+    .education__period {
+      text-align: center; /* Center degree text */
+      justify-content: center;
+    }
+  
+    .education__degree {
+      text-align: center; /* Center degree text */
+    }
+  
+    .education__grades {
+      flex-direction: column; /* Stack grades vertically */
+      gap: 0.5rem; /* Adjust gap between grades */
+    }
+
+    .education__grade {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .education__list {
+      width: 100%;
     }
   }

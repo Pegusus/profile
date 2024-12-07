@@ -18,7 +18,7 @@ interface Education {
       period: 'Aug. 2017 - May 2021',
       grades: ['CGPA: 8.5'],
       logo: 'Jadavpur_University_Logo.png',
-      about: 'Jadavpur University, located in Kolkata, India, is a prestigious public university known for its excellence in education and research. Established in 1955, the university offers a wide range of undergraduate, postgraduate, and doctoral programs in fields such as engineering, science, arts, and social sciences. It is renowned for its rigorous academic standards, research output, and vibrant campus life. In the NIRF 2023 ranking, Jadavpur University was ranked 5th in India for Engineering, highlighting its strong reputation and academic prowess in the field. The university continues to contribute significantly to research and development, fostering innovation and industry collaboration.'
+      about: 'Jadavpur University, located in Kolkata, India, is a prestigious public university known for its excellence in education and research. Established in 1955, the university offers a wide range of undergraduate, postgraduate, and doctoral programs in fields such as engineering, science, arts, and social sciences. It is renowned for its rigorous academic standards, research output, and vibrant campus life. In the NIRF 2024 ranking, Jadavpur University was ranked 4th in India for Engineering, highlighting its strong reputation and academic prowess in the field. The university continues to contribute significantly to research and development, fostering innovation and industry collaboration.'
     },
     {
       type: 'school',
