@@ -17,6 +17,7 @@ export const Hero = () => {
         <directionalLight position={[10, 10, 10]} intensity={1.5} />
         <FoxModel />
         <OrbitControls
+          enableRotate={false}
           enableZoom={false}
           enablePan={false}
         />

@@ -3,7 +3,6 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import { Helix } from './Helix';
 import { FloatingShapes } from './FloatingShapes';
 import '../../styles/Scene3D.css';
-import { FoxModel } from '../models/fox';
 
 export const Scene3D = () => {
   return (
@@ -12,7 +11,7 @@ export const Scene3D = () => {
       className="canvas3d"
     >
       
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={1} />
       <pointLight position={[10, 10, 10]} intensity={0.8} />
       <pointLight position={[-10, -10, -10]} intensity={0.5} />
       <Stars

@@ -78,3 +78,36 @@
 .experience__tech-tag {
   @apply rounded-full bg-blue-500/10 px-3 py-1 text-sm text-blue-400;
 }
+
+/* General timeline adjustments */
+@media (max-width: 768px) {
+  .MuiTimeline-root {
+    padding: 0; /* Remove padding for compact view */
+  }
+
+  .MuiTimelineItem-root {
+    flex-direction: column !important; /* Stack items vertically */
+    align-items: center; /* Center the content */
+  }
+
+  .MuiTimelineContent-root {
+    text-align: center; /* Center-align the content */
+    margin-top: 1rem; /* Add spacing between elements */
+  }
+
+  .MuiTimelineSeparator-root {
+    margin: 0 auto; /* Center the separator */
+  }
+
+  .MuiTimelineDot-root {
+    margin: 0 auto; /* Center the timeline dot */
+  }
+
+  .MuiTimelineConnector-root {
+    position: absolute;
+    left: 50%; /* Align the connector in the center of the dot */
+    transform: translateX(-50%);
+    height: 2rem; /* Adjust height to make the line visible */
+    background-color: rgba(255, 255, 255, 0.5); /* Optional: lighter line color */
+  }
+}
