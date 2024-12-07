@@ -96,8 +96,8 @@ export const Education = () => {
               <div className="education__card-content">
                 <div className="education__logo">
                   <img 
-                      src={edu.logo} // Assuming `logo` contains the image URL
-                      alt={edu.institution} // Alt text for the image
+                      src={edu.logo}
+                      alt={edu.institution}
                       className="education__logo-img" 
                   />
                 </div>

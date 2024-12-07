@@ -13,6 +13,36 @@
   background: linear-gradient(to bottom, rgba(28, 35, 49, 0.5) 0%, rgba(28, 35, 49, 0.8) 100%);
 }
 
+.experience__company-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.experience__company-logo-link {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.experience__company-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 0.75rem;
+  max-width: fit-content;
+}
+
+.experience__company-link {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.experience__company-link:hover {
+  text-decoration: underline;
+}
+
+
 .experience__container {
   @apply container mx-auto px-4;
 }
@@ -36,7 +66,7 @@
 }
 
 .experience__header {
-  @apply mb-6 flex flex-wrap items-start justify-between gap-4;
+  @apply mb-6 flex flex-wrap items-start;
 }
 
 .experience__role {
@@ -80,7 +110,7 @@
 }
 
 /* General timeline adjustments */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .MuiTimeline-root {
     padding: 0; /* Remove padding for compact view */
   }
@@ -109,5 +139,18 @@
     transform: translateX(-50%);
     height: 2rem; /* Adjust height to make the line visible */
     background-color: rgba(255, 255, 255, 0.5); /* Optional: lighter line color */
+  }
+
+  .experience__company-info {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center-align the content */
+  }
+
+  .experience__company-logo-link {
+    margin-bottom: 10px; /* Add margin to separate logo from role */
+  }
+
+  .experience__role {
+    text-align: center; /* Center-align role */
   }
 }

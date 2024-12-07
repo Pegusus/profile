@@ -18,7 +18,6 @@ export const Experience = () => {
           Professional Experience
         </motion.h2>
 
-        {/* Timeline with alternate layout */}
         <Timeline position="alternate">
           {experiences.map((exp, index) => (
             <TimelineItem key={index}>
@@ -29,17 +28,31 @@ export const Experience = () => {
               <TimelineContent>
                 <div className="experience__card">
                   <div className="experience__header">
-                    <Typography variant="h6" className="experience__role">
-                      {exp.title}
-                    </Typography>
-                    <div className="experience__meta">
-                      <div className="experience__meta-item">
-                        <Building2 className="h-4 w-4" />
-                        <span>{exp.company}</span>
-                      </div>
-                      <div className="experience__meta-item">
-                        <Calendar className="h-4 w-4" />
-                        <span>{exp.period}</span>
+                    <div className="experience__company-info">
+                      {exp.logo && (
+                          <div className="explogoimage">
+                            
+                          <img
+                            src={exp.logo}
+                            alt={exp.company}
+                            className="experience__company-logo"
+                          />
+                          </div>
+                      )}
+                      <div className="experience__role-info">
+                        <Typography variant="h6" className="experience__role">
+                          {exp.title}
+                        </Typography>
+                        <div className="experience__meta">
+                          <div className="experience__meta-item">
+                            <Building2 className="h-4 w-4" />
+                            <span>{exp.company}</span>
+                          </div>
+                          <div className="experience__meta-item">
+                            <Calendar className="h-4 w-4" />
+                            <span>{exp.period}</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
