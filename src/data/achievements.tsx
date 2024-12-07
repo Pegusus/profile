@@ -14,7 +14,12 @@ export const achievements = [
   {
     icon: <Star className="h-8 w-8" />,
     title: 'JEE Advanced',
-    description: 'Secured All India Rank 5367 in JEE Advanced 2016.',
+    description: (
+      <ul>
+        <li>Secured All India Rank 5367 in JEE Advanced 2016.</li>
+        <li>Secured All India Rank 5841 in JEE Advanced 2017.</li>
+      </ul>
+    ),
   },
   {
     icon: <Target className="h-8 w-8" />,

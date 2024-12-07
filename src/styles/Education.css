@@ -1,9 +1,85 @@
 .education {
+    display: flex;
     @apply bg-gray-900 py-20;
     background: linear-gradient(to bottom, rgba(28, 35, 49, 0.8) 0%, #1a202c 100%);
     position: relative;
     
   }
+
+  .education__container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .education__card-content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem; /* Spacing between cards */
+  }
+  
+  .education__details {
+    padding-left: 3rem;
+  }
+  
+  .education__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem; /* Set fixed width for logo container */
+    height: 8rem; /* Set fixed height for logo container */
+    background-color: #e5e7eb; /* Optional: Logo background */
+    border-radius: 50%; /* Optional: Make the logo circular */
+  }
+
+  .education__card {
+    position: relative;
+  }
+  
+  .education__card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .education__card:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 80%;
+    transform: translateY(80%);
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 4px;
+    white-space: normal;
+    font-size: 14px;
+    opacity: 0.5;
+    visibility: visible;
+    z-index: 12;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: -30%;
+  }
+
+  .education__card::after {
+    content: "";
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
 
   .education::before {
     content: "";
@@ -13,10 +89,6 @@
     width: 100%;
     background: linear-gradient(to bottom, rgba(24, 29, 42, 0.8) 0%, rgba(24, 29, 42, 1) 100%);
     /* background: linear-gradient(to bottom, rgba(28, 35, 49, 0.5) 0%, rgba(28, 35, 49, 0.8) 100%); */
-  }
-  
-  .education__container {
-    @apply container mx-auto px-4;
   }
   
   .education__title {
@@ -62,4 +134,11 @@
   
   .education__grade {
     @apply flex items-center gap-2 rounded-full bg-blue-500/10 px-3 py-1 text-sm text-blue-400;
+  }
+
+  @media (max-width: 480px) {
+    .education__card:hover::after {
+      visibility: hidden;  /* Hide the tooltip on small screens */
+      opacity: 0;  /* Make sure the tooltip is completely hidden */
+    }
   }

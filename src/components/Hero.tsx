@@ -41,7 +41,9 @@ export const Hero = () => {
         >
           Senior Software Engineer at Bazaarvoice
           <br />
-          Building scalable solutions and transforming ideas into elegant code.
+          Senior Software Engineer @ Bazaarvoice | Building scalable products from scratch | Ex-CollegeDekho.com 🦄 | Ex-PwC India
+          <br />
+          Building scalable solutions & transforming ideas into products.
         </motion.p>
         
         <motion.div 
