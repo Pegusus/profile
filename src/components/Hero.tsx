@@ -39,11 +39,11 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="hero__subtitle"
         >
-          Senior Software Engineer at Bazaarvoice
+          Senior Software Engineer @ Bazaarvoice
           <br />
-          Senior Software Engineer @ Bazaarvoice | Building scalable products from scratch | Ex-CollegeDekho.com 🦄 | Ex-PwC India
+          Ex-CollegeDekho.com 🦄 | Ex-PwC India
           <br />
-          Building scalable solutions & transforming ideas into products.
+          Building scalable solutions from scratch & transforming ideas into products.
         </motion.p>
 
         <motion.div
