@@ -46,3 +46,13 @@
 .hero__social-link {
   @apply text-white hover:text-gray-300;
 }
+
+@media (max-width: 480px) {
+  .hero_canvas_wrapper {
+    margin-top: 30%;
+  }
+
+  .hero__content {
+    margin-top: -40%;
+  }
+}
