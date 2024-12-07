@@ -6,18 +6,19 @@ export const skillCategories = [
     icon: <Code className="h-6 w-6" />,
     skills: [
       { name: 'JavaScript/TypeScript', level: 95 },
-      { name: 'Java', level: 85 },
-      { name: 'Python', level: 80 },
-      { name: 'C/C++', level: 75 },
+      { name: 'C/C++', level: 95 },
+      { name: 'Java', level: 50 },
+      { name: 'Python', level: 50 }
     ],
   },
   {
     title: 'Frameworks',
     icon: <Terminal className="h-6 w-6" />,
     skills: [
-      { name: 'React', level: 90 },
       { name: 'Node.js', level: 95 },
       { name: 'Express.js', level: 90 },
+      { name: 'Nest.js', level: 90 },
+      { name: 'React', level: 60 },
       { name: 'Django', level: 80 },
     ],
   },
@@ -37,7 +38,6 @@ export const skillCategories = [
     skills: [
       { name: 'AWS', level: 90 },
       { name: 'GCP', level: 85 },
-      { name: 'Azure', level: 80 },
     ],
   },
   {
