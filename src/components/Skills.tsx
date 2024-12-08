@@ -1,29 +1,29 @@
 import { motion } from 'framer-motion';
-import { Brain, Code, Database, Cloud, Terminal, Globe } from 'lucide-react';
 import '../styles/Skills.css';
 import { skillCategories } from '../data/skills';
 
-const SkillBar = ({ name, level }) => (
+const SkillCard = ({ title, icon, skills }) => (
   <motion.div
-    initial={{ opacity: 0, x: -20 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.5 }}
-    className="skill-bar"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="skills__card"
   >
-    <div className="skill-bar__header">
-      <span className="skill-bar__name">{name}</span>
-      <span className="skill-bar__level">{level}%</span>
+    <div className="skills__card-header">
+      <div className="skills__icon-wrapper">{icon}</div>
+      <h3 className="skills__category-title">{title}</h3>
     </div>
-    <div className="skill-bar__track">
-      <motion.div
-        initial={{ width: 0 }}
-        whileInView={{ width: `${level}%` }}
-        transition={{ duration: 1, delay: 0.2 }}
-        className="skill-bar__progress"
-      />
+    <div className="skills__icons-container">
+      {skills.map((skill, idx) => (
+        <div key={idx} className="skills__icon-item">
+          {skill.icon}
+          <span className="skills__icon-label">{skill.name}</span>
+        </div>
+      ))}
     </div>
   </motion.div>
 );
+
 
 export const Skills = () => {
   return (
@@ -40,27 +40,7 @@ export const Skills = () => {
 
         <div className="skills__grid">
           {skillCategories.map((category, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="skills__card"
-            >
-              <div className="skills__card-header">
-                <div className="skills__icon-wrapper">
-                  {category.icon}
-                </div>
-                <h3 className="skills__category-title">
-                  {category.title}
-                </h3>
-              </div>
-              <div className="space-y-4">
-                {category.skills.map((skill, idx) => (
-                  <SkillBar key={idx} {...skill} />
-                ))}
-              </div>
-            </motion.div>
+            <SkillCard key={index} {...category} />
           ))}
         </div>
       </div>

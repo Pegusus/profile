@@ -30,26 +30,22 @@
   @apply text-xl font-semibold text-white;
 }
 
-.skill-bar {
-  @apply mt-2;
+.skills__icons-container {
+  @apply flex flex-wrap gap-6 justify-center;
 }
 
-.skill-bar__header {
-  @apply flex justify-between text-sm;
+.skills__icon-item {
+  @apply flex flex-col items-center text-center;
 }
 
-.skill-bar__name {
-  @apply text-gray-300;
+.skills__icon-label {
+  @apply mt-2 text-sm text-gray-400;
 }
 
-.skill-bar__level {
-  @apply text-gray-400;
+.skills__icon-item i {
+  @apply text-3xl text-gray-300;
 }
 
-.skill-bar__track {
-  @apply mt-1 h-2 w-full rounded-full bg-gray-700;
-}
-
-.skill-bar__progress {
-  @apply h-full rounded-full bg-gradient-to-r from-blue-500 to-cyan-500;
+.skills__card-header h3 {
+  @apply text-xl font-semibold text-white;
 }

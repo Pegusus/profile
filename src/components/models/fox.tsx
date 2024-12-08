@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
-import { useControls } from "leva";
 
 const FoxModel = () => {
-  // Load the GLTF model and animations
   const fox = useGLTF("./Fox/glTF/Fox.gltf");
   const { actions, names } = useAnimations(fox.animations, fox.scene);
 
@@ -14,23 +12,18 @@ const FoxModel = () => {
 
     const playNextAnimation = () => {
       const currentAnimation = animationSequence[currentIndex];
-
-      // Stop the current animation if it's playing
       const action = actions[currentAnimation];
       if (action) {
         action.reset().fadeIn(0.5).play();
       }
 
-      // Move to the next animation after a certain duration (e.g., 3 seconds for each)
-      currentIndex = (currentIndex + 1) % animationSequence.length; // Loop through the sequence
-      setTimeout(playNextAnimation, 5000); // Play each animation for 3 seconds
+      currentIndex = (currentIndex + 1) % animationSequence.length;
+      setTimeout(playNextAnimation, 5000);
     };
 
-    // Start playing the animations
     playNextAnimation();
 
     return () => {
-      // Cleanup: Stop all animations when the component is unmounted
       Object.values(actions).forEach((action) => action.stop());
     };
   }, [actions]);
@@ -38,10 +31,10 @@ const FoxModel = () => {
   return (
     <>
       <primitive
-        object={fox.scene} // Render the GLTF scene
-        scale={0.4} // Scale the model
-        position={[0, -10, -80]} // Set position in 3D space
-        rotation-y={-1} // Apply rotation on Y-axis
+        object={fox.scene}
+        scale={0.4}
+        position={[0, -10, -80]}
+        rotation-y={-1}
       />
     </>
   );
