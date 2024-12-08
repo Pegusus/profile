@@ -186,7 +186,7 @@ export const skillCategories = [
             rel="noreferrer"
           >
             <img
-              src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg"
+              src="https://img.icons8.com/?size=100&id=e6uRfPIDgoXi&format=png&color=000000"
               width="36"
               height="36"
               alt="AWS"
