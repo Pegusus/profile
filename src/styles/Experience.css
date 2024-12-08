@@ -112,7 +112,12 @@
 /* General timeline adjustments */
 @media (max-width: 480px) {
   .MuiTimeline-root {
-    padding: 0; /* Remove padding for compact view */
+    display: flex;
+    padding: 0 !important; /* Remove padding for compact view */
+  }
+
+  .experience__container {
+    padding: 0;
   }
 
   .MuiTimelineItem-root {
