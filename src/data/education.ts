@@ -15,10 +15,20 @@ interface Education {
       institution: 'Jadavpur University',
       location: 'Kolkata, West Bengal',
       degree: 'Bachelor of Engineering, Electronics',
-      period: 'Aug. 2017 - May 2021',
+      period: 'Aug. 2017 - Aug 2021',
       grades: ['CGPA: 8.5'],
       logo: 'Jadavpur_University_Logo.png',
       about: 'Jadavpur University, located in Kolkata, India, is a prestigious public university known for its excellence in education and research. Established in 1955, the university offers a wide range of undergraduate, postgraduate, and doctoral programs in fields such as engineering, science, arts, and social sciences. It is renowned for its rigorous academic standards, research output, and vibrant campus life. In the NIRF 2024 ranking, Jadavpur University was ranked 4th in India for Engineering, highlighting its strong reputation and academic prowess in the field. The university continues to contribute significantly to research and development, fostering innovation and industry collaboration.'
+    },
+    {
+      type: 'university',
+      institution: 'NIT Durgapur',
+      location: 'Durgapur, West Bengal',
+      degree: 'Bachelor of Technology, Electronics',
+      period: 'Aug. 2016 - Aug 2017',
+      grades: ['CGPA: 8.5'],
+      logo: 'NITdgp.png',
+      about: 'National Institute of Technology (NIT) Durgapur is a prestigious public technical university in Durgapur, West Bengal, India. It was established in 1960 and is one of the 31 NITs in India. NIT Durgapur offers undergraduate, postgraduate, and doctoral programs in various fields of engineering, technology, and management. Known for its high academic standards, research output, and industry collaborations, the institute has a strong reputation in the engineering and technology community. It is recognized for its state-of-the-art campus, excellent faculty, and vibrant student life.'
     },
     {
       type: 'school',
