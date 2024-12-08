@@ -1,4 +1,3 @@
-import React from 'react';
 import { Scene3D } from './components/Scene3D/Scene3D';
 import { Hero } from './components/Hero';
 import { Experience } from './components/Experience';

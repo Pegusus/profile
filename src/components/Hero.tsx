@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import FoxModel from '../components/models/fox';
@@ -52,7 +52,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="hero__location"
         >
-          <img src="map.png" alt="Location" className="hero__location-icon" />
+          <img src="map.png" alt="Location" className="hero__location-icon" loading="lazy"/>
           <span className="hero__location-text">Bangalore, Karnataka, India</span>
         </motion.div>
         

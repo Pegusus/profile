@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { licenses } from "../data/licenses";
 import "../styles/Licenses.css";

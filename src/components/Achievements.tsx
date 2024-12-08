@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Award, Star, Trophy, Target } from 'lucide-react';
 import '../styles/Achievements.css';
 import { achievements } from '../data/achievements';
 
