@@ -5,6 +5,7 @@ import { Experience } from './components/Experience';
 import { Skills } from './components/Skills';
 import { Achievements } from './components/Achievements';
 import { Education } from './components/Education';
+import { Licenses } from './components/Licenses';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Experience />
         <Skills />
         <Achievements />
+        <Licenses />
       </div>
     </div>
   );

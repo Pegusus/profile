@@ -1,0 +1,99 @@
+.licenses {
+    display: flex;
+    justify-content: center;
+    @apply bg-gray-800 py-20;
+  }
+
+  .licenses__organization_details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  .licenses__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @apply container mx-auto px-4;
+  }
+  
+  .licenses__title {
+    @apply mb-16 text-center text-4xl font-bold text-white;
+  }
+  
+  .licenses__grid {
+    @apply grid gap-8 md:grid-cols-2 lg:grid-cols-2;
+  }
+  
+  .licenses__card {
+    @apply rounded-xl bg-gray-900 p-6 shadow-lg transition-all hover:bg-gray-900/80;
+    display: flex;
+    flex-direction: column
+  }
+  
+  .licenses__card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .licenses__logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .licenses__logo-placeholder {
+    @apply h-8 w-8 bg-gray-500 flex justify-center items-center text-white rounded-full;
+  }
+  
+  .licenses__card-title {
+    @apply mb-2 text-xl font-semibold text-white;
+  }
+  
+  .licenses__organization {
+    @apply text-sm text-gray-400;
+  }
+  
+  .licenses__date {
+    @apply text-sm text-gray-400;
+  }
+  
+  .licenses__credential-id {
+    @apply mt-2 text-sm text-gray-400;
+  }
+  
+  .licenses__credential-link {
+    @apply mt-4 text-blue-400 hover:text-blue-500;
+  }
+
+  @media (max-width: 480px) {
+    .licenses__container {
+        padding: 0;
+    }
+    .licenses__card-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .licenses__card {
+        gap: 2rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .licenses__grid {
+        width: 90%;
+        padding: 0;
+    }
+    .licenses__organization_details {
+        justify-content: center;
+        align-items: center;
+    }
+    .licenses__credential-link {
+        justify-content: center;
+        align-items: center;
+    }
+}
+  
